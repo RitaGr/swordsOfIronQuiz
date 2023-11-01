@@ -2,41 +2,128 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-a{
+body{
+    background-color: #F2F3F4;
+}
+a.main{
     position: absolute;
     top: 20px;
     right: 20px;
-    color:grey;
 }
+a.link-style{
+    font-size: 25px;
+    color:#18272F;
+    text-decoration: none;
+    position: absolute;
+}
+a.link-style::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+a.link-style:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
 .wrapper {
-    font-family: Arial, Helvetica, sans-serif;
     border: 3px solid;
     border-radius: 10px;
     padding: 25px;
     text-align: center;
-    width: 375px;
+    max-width: 550px;
+    max-height: 400px;
     margin: auto auto;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    background-color: #FDFEFE;
+
 }
 
 .wrapper p{
     padding: 10px;
+    font-size: 25px;
+    margin-bottom: 15px;
 }
 .checkBtn{
     color: #fff;
-    width: calc(100% / 2 - 10px);
+    width: calc(100% / 2 - 20px);
     padding: 8px 0;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.2s ease;
 }
 #checkTrue{
-    background-color: green;
+    background-color: #609922;
+    margin-right: 10px;
 }
 #checkFalse{
-    background-color: red;
+    background-color: #cb2e23;
+    margin-left: 10px;
+}
+
+.button-80 {
+  background: #fff;
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  padding: .875rem 1.125rem;
+  position: relative;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-80:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.button-80:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.button-80:focus {
+  outline: 0 solid transparent;
+}
+
+.button-80:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.button-80:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.button-80:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+.button-80:not(:disabled):active {
+  transform: translateY(.125rem);
 }
