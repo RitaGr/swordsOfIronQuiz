@@ -1,4 +1,5 @@
 // an array of objects that include the question truth or false, answer - as what the correct answer is and the response. executed once wrong choice (truth or false) was picked by the user
+let currentQuestion = 0;
 const questions = [{
     "question": '“From the River to the Sea Palestine Will Be Free” is a catch-all phrase symbolizing Palestinian control over the entire territory of Israel\'s borders, from the Jordan River to the Dead Sea',
     "response": "You look so dumb right now...",
@@ -25,7 +26,84 @@ const questions = [{
     "answer": true
 },];
 
-document.getElementById("questionText").innerHTML = questions[3].question;
+(function(){
+    // page initialization code here
+    fnReset() // call reset on document ready
+
+    document.getElementById("nextQuestion").addEventListener('click', function(event){
+        fnCheck();
+    });
+
+    document.getElementById('checkTrue').addEventListener('click', function(event){
+        fnCheck(true);
+    });
+    document.getElementById('checkFalse').addEventListener('click', function(event){
+        fnCheck(false);
+    });
+    document.getElementById('nextQuestion').addEventListener('click', function(event){
+        fnNext();
+    });
+    document.getElementById('resetQuiz').addEventListener('click', function(event){
+        fnReset();
+    });
+})();
+
+function fnReset(){
+    document.getElementById('questionResponce').classList.add('hide');
+    document.getElementById('nextQuestion').classList.add('hide');
+    document.getElementById('container').classList.add('hide');
+    document.getElementById('wrapper').classList.remove('hide');
+    currentQuestion = 0;
+    document.getElementById('questionText').innerHTML = questions[currentQuestion].question;
+}
+function fnCheck(answer){
+    // removing the design classes made for a correct/incorrect answer
+    // document.getElementById('questionResponce').classList.remove('correct','incorrect');
+    if (questions[currentQuestion].answer === answer){
+        // show correct
+        document.getElementById('wrapper').classList.add('correct');
+        document.getElementById('backgroundColor').classList.add('correctBackground');
+        document.getElementById('wrapper').classList.add('white-text');
+        document.getElementById('questionResponce').innerHTML = "Correct!";
+    } else {
+        // show incorrect
+        document.getElementById('wrapper').classList.add('incorrect');
+        document.getElementById('backgroundColor').classList.add('incorrectBackground');
+        document.getElementById('wrapper').classList.add('white-text');
+        document.getElementById('questionResponce').innerHTML = questions[currentQuestion].response;
+    }
+    document.getElementById('questionResponce').classList.remove('hide');
+    document.getElementById('nextQuestion').classList.remove('hide');
+    document.getElementById('checkTrue').classList.add('hide');
+    document.getElementById('checkFalse').classList.add('hide');
+}
+
+function fnNext(){
+    document.getElementById('wrapper').classList.remove('correct');
+    document.getElementById('backgroundColor').classList.remove('correctBackground');
+    document.getElementById('wrapper').classList.remove('white-text');
+    document.getElementById('wrapper').classList.remove('incorrect');
+    document.getElementById('backgroundColor').classList.remove('incorrectBackground');
+    document.getElementById('wrapper').classList.remove('white-text');
+    document.getElementById('checkTrue').classList.remove('hide');
+    document.getElementById('checkFalse').classList.remove('hide');
+    document.getElementById('questionResponce').classList.add('hide');
+    if (currentQuestion < questions.length - 1){
+        currentQuestion = currentQuestion + 1;
+        document.getElementById('nextQuestion').classList.add('hide');
+        document.getElementById('container').classList.add('hide');
+    } else {
+        document.getElementById('nextQuestion').classList.add('hide');
+        document.getElementById('wrapper').classList.add('hide');
+        document.getElementById('container').classList.remove('hide');
+    }
+    document.getElementById('questionResponce').classList.add('hide');
+    document.getElementById('questionText').innerHTML = questions[currentQuestion].question;
+
+}
+
+
+// document.getElementById("questionText").innerHTML = questions[currentQuestion].question;
 
 
 // testing color design options and application responce to correct/incorrect answer by the user
