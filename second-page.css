@@ -5,3 +5,15 @@ body{
 ul li{
     padding:25px;
 }
+.small-logo{
+    position: absolute;
+    margin: 0 auto;
+    height: 10%;
+}
+.menu-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
