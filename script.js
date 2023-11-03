@@ -63,13 +63,13 @@ function fnCheck(answer){
         // show correct
         document.getElementById('wrapper').classList.add('correct');
         document.getElementById('backgroundColor').classList.add('correctBackground');
-        document.getElementById('wrapper').classList.add('white-text');
+        document.getElementById('wrapper').classList.add('truth-text');
         document.getElementById('questionResponce').innerHTML = "Correct!";
     } else {
         // show incorrect
         document.getElementById('wrapper').classList.add('incorrect');
         document.getElementById('backgroundColor').classList.add('incorrectBackground');
-        document.getElementById('wrapper').classList.add('white-text');
+        document.getElementById('wrapper').classList.add('false-text');
         document.getElementById('questionResponce').innerHTML = questions[currentQuestion].response;
     }
     document.getElementById('questionResponce').classList.remove('hide');
@@ -81,10 +81,10 @@ function fnCheck(answer){
 function fnNext(){
     document.getElementById('wrapper').classList.remove('correct');
     document.getElementById('backgroundColor').classList.remove('correctBackground');
-    document.getElementById('wrapper').classList.remove('white-text');
+    document.getElementById('wrapper').classList.remove('truth-text');
     document.getElementById('wrapper').classList.remove('incorrect');
     document.getElementById('backgroundColor').classList.remove('incorrectBackground');
-    document.getElementById('wrapper').classList.remove('white-text');
+    document.getElementById('wrapper').classList.remove('false-text');
     document.getElementById('checkTrue').classList.remove('hide');
     document.getElementById('checkFalse').classList.remove('hide');
     document.getElementById('questionResponce').classList.add('hide');
