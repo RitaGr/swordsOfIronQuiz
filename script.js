@@ -102,12 +102,22 @@ function fnNext(){
 
 }
 
+function sound(){
+    var snd = new Audio('button-click.mp3');//wav is also supported
+    snd.play();//plays the sound
+}
 
-// document.getElementById("questionText").innerHTML = questions[currentQuestion].question;
+// playing a sound when the answer is wrong/correct
+// function wrongAnswer(){
+//     var wrongSound = new Audio('sad-trombone-fail.wav');
+//     wrongSound.play();
+// }
+// function stopAudio(){
+//     wrongSound.stop();
+// }
 
 
 // testing color design options and application responce to correct/incorrect answer by the user
-
 // const btnCheckTrue = document.getElementById('checkTrue');
 // const backgroundColor = document.getElementById('backgroundColor');
 

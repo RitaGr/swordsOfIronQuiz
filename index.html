@@ -6,21 +6,22 @@
     <title>Swords of Iron Quiz</title>
     <link rel="stylesheet" href="styles.css"/>
     <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js"></script>
 </head>
 <body id="backgroundColor">
-    <img class="logo" src="logo.png" />
+    <img class="logo" src="icons/logo.png" />
     <a class="link-style main" href="sources.html">sources</a>
     <h2 id="questionResponce" class="hide"></h2>
     <div class="wrapper " id="wrapper" >
         <p id="questionText"></p>
-        <button id="checkTrue" class="checkBtn button-80">TRUE</button>
-        <button id="checkFalse" class="checkBtn button-80">FALSE</button>
-        <button id="nextQuestion" class="nextQuestion hide button-80">NEXT</button>
+        <button onclick="sound()" id="checkTrue" class="checkBtn button-80">TRUE</button>
+        <button onclick="sound()" id="checkFalse" class="checkBtn button-80">FALSE</button>
+        <button onclick="sound()" id="nextQuestion" class="nextQuestion hide button-80">NEXT</button>
     </div>
     <div class="container hide" id="container">    
         <h2 id="quizOver">Quiz is Over</h2>
         <p >Feel free to explore the sources that were used for this quiz, on the right corner of the screen!</p>
-        <button id="resetQuiz" class="checkBtn button-80">RESTART</button>
+        <button onclick="sound()" id="resetQuiz" class="checkBtn button-80">RESTART</button>
     </div>
 
 </body>
