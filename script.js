@@ -1,12 +1,12 @@
 // an array of objects that include the question truth or false, answer - as what the correct answer is and the response. executed once wrong choice (truth or false) was picked by the user
 let currentQuestion = 0;
 const questions = [{
-    "question": '“From the River to the Sea Palestine Will Be Free” is a catch-all phrase symbolizing Palestinian control over the entire territory of Israel\'s borders, from the Jordan River to the Dead Sea',
+    "question": '“From the River to the Sea Palestine Will Be Free” is a catch-all phrase symbolizing Palestinian control over the entire territory of Israel\'s borders, from the Jordan River to the Dead Sea.',
     "response": "You look so dumb right now...",
     "answer": false
 },
 {
-    "question": "In 1947, the United Nations(UN) adopted a Partition Plan for Mandatory Palestine, which recommended the creation of independent Arab and Jewish states(Also known as the two-state solution. The Partition Plan was accepted by the Arabs but rejected by the Jews",
+    "question": "In 1947, the United Nations(UN) adopted a Partition Plan for Mandatory Palestine, which recommended the creation of independent Arab and Jewish states(Also known as the two-state solution. The Partition Plan was accepted by the Arabs but rejected by the Jews.",
     "response": "Someone here doesn't want peace, and it's not Israel honey...",
     "answer": false
 },
@@ -24,7 +24,17 @@ const questions = [{
     "question": "1 soldier captured in Israel by Palestinian militants, and held for five years was released in exchange for 1,027 Palestinian prisoners on October 18th, 2011.",
     "response": "Still sure Israel doesn't care about its own people?",
     "answer": true
-},];
+},
+{
+    "question": "Hamas uses its resources and money to build bomb shelters for the Palestinian civilians to take shelter in.",
+    "response": "Hamas is a terrorist organization that doesn't care about its own people",
+    "answer": false
+},
+{
+    "question": "Hamas targets only Israeli people, as they are the colonizers of Palestine.",
+    "response": "\“All those captured for us are Israelis although there is an appeal to look at their original nationalities in the hope that this will save them,\” -Hamas leader Mousa Abu Marzouk",
+    "answer": false
+}];
 
 (function(){
     // page initialization code here
