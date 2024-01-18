@@ -136,8 +136,8 @@ a.link-style:hover::before {
   color: #fff;
   padding: 25px;
   font-weight: 700;
-  font-size: 50px;
-  margin-top: 100px;
+  font-size: 30px;
+  margin-top: 50px;
 
 }
 #resetQuiz{
@@ -153,11 +153,13 @@ a.link-style:hover::before {
 
 .false-text{
   /* color: #9f0500;*/
-  color: white;
+  color: #F5F5F5;
+  border-color: #BC4749;
 }
 .truth-text{
   /* color: #194d33; */
-  color: #386641;
+  color: #F5F5F5;
+  border-color: #386641;
 }
 
 .button-80 {
