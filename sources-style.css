@@ -1,7 +1,19 @@
+body {
+    background-image: url('icons/logo.png');
+    background-size: contain; /* This ensures that the background image covers the entire container */
+    background-position: center center; /* This centers the background image horizontally and vertically */
+    background-repeat: no-repeat; /* This ensures that the background image is not repeated */
+    /* overflow: hidden; */
+  }
+#sources
+{
+    overflow: auto;
+}
 #sources .source-row
 {
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
     gap: 10px;
 }
 .source-cube
@@ -22,4 +34,13 @@
 #cube3
 {
     grid-column: 3;
+}
+#cube4
+{
+    grid-column: 1;
+}
+.source-link
+{
+    font-size: 15px !important;
+    text-decoration: none;
 }
