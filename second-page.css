@@ -6,6 +6,9 @@ body{
     margin-left: 20% !important;
     text-align: center;
 }
+img{
+    right: 0;
+}
 .menu-bar{
     display: flex;
     align-items: center;
