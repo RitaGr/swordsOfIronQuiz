@@ -92,12 +92,12 @@ a.link-style:hover::before {
     border-color: #252422;
     cursor: pointer;
 }
-#checkTrue{
+#checkTrue, .rlt-true-btn{
     /* background-color: #609922; */
     background-color: #386641;
     margin-right: 10px;
 }
-#checkFalse{
+#checkFalse, .rlt-fls-btn{
     /* background-color: #cb2e23; */
     background-color: #BC4749;
     margin-left: 10px;
