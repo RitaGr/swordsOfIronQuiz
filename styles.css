@@ -139,7 +139,7 @@ a.link-style:hover::before {
   margin-top: 50px;
 
 }
-#resetQuiz{
+#resetQuiz, .rlt-qst-btn{
   width: calc(100% / 2 - 20px);
   padding: 8px 0;
   height: 50px;
@@ -148,6 +148,10 @@ a.link-style:hover::before {
   cursor: pointer;
   background-color: #FFD166;
   color: #FFFBFF;
+}
+
+.rlt-qst-btn{
+  width: 100%;
 }
 
 .false-text{
